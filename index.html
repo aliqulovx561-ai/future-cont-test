@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Continuous Tense Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="screen active">
+        <div class="login-container">
+            <div class="login-header">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>English Grammar Test</h1>
+                <p class="subtitle">Future Continuous Tense Assessment</p>
+            </div>
+            
+            <div class="login-form">
+                <div class="form-group">
+                    <label for="studentName"><i class="fas fa-user"></i> Full Name</label>
+                    <input type="text" id="studentName" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="studentGroup"><i class="fas fa-users"></i> Select Your Group</label>
+                    <select id="studentGroup" required>
+                        <option value="">-- Choose your group --</option>
+                        <option value="beginner_9.30">Beginner 9.30</option>
+                        <option value="elementary_14.30">Elementary 14.30</option>
+                        <option value="elementary_18.30">Elementary 18.30</option>
+                        <option value="beginner_even_14.30">Beginner Even 14.30</option>
+                    </select>
+                </div>
+                
+                <div class="warning-box">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Important Instructions</h3>
+                    <ul>
+                        <li>You have <strong>15 minutes</strong> to complete the test</li>
+                        <li>If you switch tabs or leave the page <strong>more than 3 times</strong>, your test will be automatically submitted</li>
+                        <li>Do not refresh the page during the test</li>
+                        <li>All questions are multiple choice</li>
+                    </ul>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agreeTerms" required>
+                    <label for="agreeTerms">I agree to the test conditions and understand the rules</label>
+                </div>
+                
+                <button id="startTestBtn" class="btn-primary">
+                    <i class="fas fa-play-circle"></i> Start Test
+                </button>
+            </div>
+            
+            <div class="login-footer">
+                <p><i class="fas fa-clock"></i> Test Duration: 15 minutes | <i class="fas fa-question-circle"></i> 25 Questions</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Test Screen -->
+    <div id="testScreen" class="screen">
+        <div class="test-header">
+            <div class="student-info">
+                <span id="displayName"></span>
+                <span id="displayGroup" class="group-badge"></span>
+            </div>
+            
+            <div class="timer-container">
+                <i class="fas fa-clock"></i>
+                <div class="timer" id="timer">15:00</div>
+            </div>
+            
+            <div class="warning-indicator" id="warningIndicator">
+                <i class="fas fa-shield-alt"></i>
+                <span>Page Changes: <span id="changeCount">0</span>/3</span>
+            </div>
+        </div>
+        
+        <div class="test-container">
+            <div class="test-header-info">
+                <h2><i class="fas fa-pencil-alt"></i> Future Continuous Tense Test</h2>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                    <div class="progress-text">Question <span id="currentQuestion">1</span> of 25</div>
+                </div>
+            </div>
+            
+            <div class="questions-container" id="questionsContainer">
+                <!-- Questions will be dynamically inserted here -->
+            </div>
+            
+            <div class="navigation-buttons">
+                <button id="prevBtn" class="btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+                <button id="nextBtn" class="btn-primary">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+                <button id="submitBtn" class="btn-submit">
+                    <i class="fas fa-paper-plane"></i> Submit Test
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submission Screen -->
+    <div id="submitScreen" class="screen">
+        <div class="submission-container">
+            <div class="submission-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h1>Test Submitted Successfully!</h1>
+            <p class="submission-message">Your answers have been recorded and sent to your teacher.</p>
+            
+            <div class="submission-details">
+                <div class="detail-card">
+                    <i class="fas fa-user"></i>
+                    <h3 id="finalName"></h3>
+                    <p>Student Name</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-users"></i>
+                    <h3 id="finalGroup"></h3>
+                    <p>Group</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-clock"></i>
+                    <h3 id="timeTaken"></h3>
+                    <p>Time Taken</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-list-ol"></i>
+                    <h3 id="answeredCount"></h3>
+                    <p>Questions Answered</p>
+                </div>
+            </div>
+            
+            <div class="submission-note">
+                <i class="fas fa-info-circle"></i>
+                <p>You can now close this window. Your results will be reviewed by your teacher.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
