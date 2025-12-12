@@ -19,10 +19,6 @@
       "source": "/(.*)",
       "headers": [
         {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'"
-        },
-        {
           "key": "X-Frame-Options",
           "value": "DENY"
         },
@@ -33,6 +29,10 @@
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
         }
       ]
     }
