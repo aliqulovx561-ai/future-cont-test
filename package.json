@@ -1,22 +1,21 @@
 {
   "name": "future-continuous-test",
   "version": "1.0.0",
-  "description": "Future Continuous Tense Test System with Telegram Integration",
+  "description": "Online Future Continuous Tense Test with Telegram Reporting",
   "main": "index.html",
   "scripts": {
     "dev": "vercel dev",
-    "start": "serve .",
+    "start": "npx serve .",
     "deploy": "vercel --prod"
   },
-  "dependencies": {
-    "@vercel/node": "^3.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "serve": "^14.0.0"
+    "@vercel/node": "^3.0.0"
   },
   "engines": {
     "node": ">=18.x"
   },
-  "author": "English Test System",
+  "keywords": ["test", "english", "grammar", "telegram"],
+  "author": "",
   "license": "MIT"
 }
