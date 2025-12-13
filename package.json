@@ -1,7 +1,7 @@
 {
   "name": "future-continuous-test",
   "version": "1.0.0",
-  "description": "Online Future Continuous Tense Test with Telegram Reporting",
+  "description": "Online Future Continuous Tense Test with Review Screen and Telegram Reporting",
   "main": "index.html",
   "scripts": {
     "dev": "vercel dev",
@@ -15,7 +15,7 @@
   "engines": {
     "node": ">=18.x"
   },
-  "keywords": ["test", "english", "grammar", "telegram"],
+  "keywords": ["test", "english", "grammar", "telegram", "education"],
   "author": "",
   "license": "MIT"
 }
