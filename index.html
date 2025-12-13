@@ -119,6 +119,53 @@
         </main>
     </div>
 
+    <!-- Review Screen -->
+    <div id="reviewScreen" class="screen">
+        <div class="review-container">
+            <div class="review-header">
+                <h1><i class="fas fa-clipboard-check"></i> Review Your Answers</h1>
+                <p class="review-subtitle">Please review your answers before final submission</p>
+            </div>
+            
+            <div class="review-summary">
+                <div class="summary-card">
+                    <div class="summary-item">
+                        <span class="summary-label">Student Name:</span>
+                        <span class="summary-value" id="reviewName">-</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Group:</span>
+                        <span class="summary-value" id="reviewGroup">-</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Time Taken:</span>
+                        <span class="summary-value" id="reviewTime">-</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Questions Answered:</span>
+                        <span class="summary-value" id="reviewAnswered">-</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="answers-review">
+                <h2><i class="fas fa-list-ol"></i> Your Answers</h2>
+                <div class="answers-list" id="answersList">
+                    <!-- Answers will be displayed here -->
+                </div>
+            </div>
+            
+            <div class="review-actions">
+                <button id="editTestBtn" class="btn-secondary">
+                    <i class="fas fa-edit"></i> Edit Answers
+                </button>
+                <button id="finalSubmitBtn" class="btn-submit">
+                    <i class="fas fa-paper-plane"></i> Final Submit
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Results Screen -->
     <div id="resultsScreen" class="screen">
         <div class="results-card">
@@ -126,7 +173,7 @@
                 <i class="fas fa-check-circle"></i>
             </div>
             
-            <h1>Test Submitted!</h1>
+            <h1>Test Submitted Successfully!</h1>
             <p class="results-subtitle">Your answers have been sent to your teacher</p>
             
             <div class="results-summary">
